@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Order</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+<header><h1>Book Your Service</h1></header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="order.html" class="active">Order</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section>
+<form class="card">
+<label>Name</label>
+<input type="text" id="name">
+
+<label>Phone</label>
+<input type="tel" id="phone">
+
+<label>Service</label>
+<select id="service" onchange="updatePrice()">
+<option>Bridal Makeup</option>
+<option>Party Makeup</option>
+<option>Professional Makeup</option>
+<option>Makeup Training</option>
+</select>
+
+<label>Price</label>
+<input type="text" id="price" readonly>
+
+<label>Event Date</label>
+<input type="date" id="date"><br><br>
+
+<button type="button" onclick="placeOrder()">Place Order</button>
+</form>
+</section>
+
+<footer><p>&copy; Brush & Blush by Gayu</p></footer>
+
+</body>
+</html>
