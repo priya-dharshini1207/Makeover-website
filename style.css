@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Brush & Blush</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Intha page-ku mattum ulla extra styles */
+        .details-content {
+            display: none; /* Starting-la hide aagi irukkum */
+            background: #fff0f5;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #c2185b;
+        }
+        .service-card { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header><h1>Our Services & Packages</h1></header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section>
+        <!-- Bridal Card -->
+        <div class="card service-card" onclick="toggleDetails('bridal-info')">
+            <h3>Bridal Makeup ▼</h3>
+            <p>Click to see packages & pricing</p>
+            
+            <div id="bridal-info" class="details-content">
+                <ul style="text-align: left;">
+                    <li><b>HD Bridal:</b> ₹15,000</li>
+                    <li><b>Airbrush Bridal:</b> ₹20,000</li>
+                    <li><b>Includes:</b> Hair styling, Saree draping & Lashes</li>
+                </ul>
+                <a href="order.html"><button>Book Bridal Now</button></a>
+            </div>
+        </div>
+
+        <!-- Party Card -->
+        <div class="card service-card" onclick="toggleDetails('party-info')">
+            <h3>Party Makeup ▼</h3>
+            <p>Click to see packages & pricing</p>
+            
+            <div id="party-info" class="details-content">
+                <ul style="text-align: left;">
+                    <li><b>Soft Glam:</b> ₹3,000</li>
+                    <li><b>Heavy Festive:</b> ₹5,000</li>
+                    <li><b>Includes:</b> Basic Hair styling</li>
+                </ul>
+                <a href="order.html"><button>Book Party Now</button></a>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Brush & Blush by Gayu</p></footer>
+
+   
+    <script>
+        function toggleDetails(id) {
+            let x = document.getElementById(id);
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
