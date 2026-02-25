@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Order Confirmed</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Order Confirmed 🎉</h1></header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="order.html">New Order</a>
+</nav>
+
+<section class="card">
+<h2>Thank You!</h2>
+<p id="details"></p>
+<p style="color:green;">✔ Please save your Order ID for future reference</p>
+<a href="index.html"><button>Back to Home</button></a>
+</section>
+
+<footer><p>&copy; Brush & Blush by Gayu</p></footer>
+
+<script>
+let n = localStorage.getItem("custName");
+let s = localStorage.getItem("custService");
+let d = localStorage.getItem("custDate");
+let id = localStorage.getItem("orderId");
+
+document.getElementById("details").innerHTML =
+"<b>Name:</b> "+n+"<br>"+
+"<b>Service:</b> "+s+"<br>"+
+"<b>Date:</b> "+d+"<br>"+
+"<b>Order ID:</b> "+id;
+</script>
+
+</body>
+</html>
